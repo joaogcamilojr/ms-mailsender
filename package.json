@@ -1,10 +1,33 @@
 {
   "name": "ms-mailsender",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
-  "private": true,
-  "license": "UNLICENSED",
+  "description": "A NestJS microservice for handling email sending operations",
+  "author": {
+    "name": "João Gustavo Camilo",
+    "email": "contact@joaogcamilojr.com",
+    "url": "https://github.com/joaogcamilojr"
+  },
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joaogcamilojr/ms-mailsender.git"
+  },
+  "bugs": {
+    "url": "https://github.com/joaogcamilojr/ms-mailsender/issues"
+  },
+  "homepage": "https://github.com/joaogcamilojr/ms-mailsender#readme",
+  "keywords": [
+    "nestjs",
+    "microservice",
+    "email",
+    "mail",
+    "typescript",
+    "nodejs"
+  ],
+  "engines": {
+    "node": ">=22.13.1"
+  },
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
