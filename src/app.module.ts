@@ -1,10 +1,18 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { ConfigModule } from '@nestjs/config';
+import 'dotenv/config';
+
+import awsConfig from './config/aws.config';
+import emailConfig from './config/email.config';
+import { MailModule } from './modules/mail/mail.module';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+  imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+      load: [awsConfig, emailConfig],
+    }),
+    MailModule,
+  ],
 })
 export class AppModule {}
